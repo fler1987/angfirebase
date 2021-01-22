@@ -4,7 +4,6 @@ import { Cliente } from '../_model/cliente';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { AngularFireDatabase, AngularFireList} from '@angular/fire/database';
-import { Calculo } from '../_model/calculo';
 
 
 @Injectable({
@@ -47,19 +46,6 @@ export class ClienteService {
 
     return this.clienteLista;
   }
-
-  // obtenerCalculos(data: Cliente[]){
-
-  //     return {
-  //       edadPromedio: this.obtenerEdadPromedio(data),
-  //       desviacionEstandar: this.obtenerDesviacionEstandar(data)
-  //     }          
-      
-  // }
-
-  
-
-
 
   registrarCliente(cliente : Cliente){     
     
