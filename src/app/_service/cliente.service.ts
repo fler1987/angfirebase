@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Cliente } from '../_model/cliente';
-import { environment } from 'src/environments/environment';
-import { HttpClient } from '@angular/common/http';
 import { AngularFireDatabase, AngularFireList} from '@angular/fire/database';
 
 
@@ -21,7 +19,7 @@ export class ClienteService {
   
   //private url = `${environment.HOST}/clientes`;
   
-  constructor(private firebase: AngularFireDatabase, private http : HttpClient) { 
+  constructor(private firebase: AngularFireDatabase) { 
     this.clienteList = this.firebase.list('/clientes', (ref) =>
       ref.orderByChild('nombres')
     );
